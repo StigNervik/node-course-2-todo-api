@@ -40,9 +40,6 @@ describe('POST /todos', () => {
     .post('/todos')
     .send({text})
     .expect(400)
-    .expect((res) => {
-      // expect(res.body.text).toBe(undefined);
-    })
     .end((err, res) => {
       if (err) {
         return done(err);
